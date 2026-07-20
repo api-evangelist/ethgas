@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.ethgas.com/ (Authentication section)
+docs: https://developers.ethgas.com/
+summary:
+  types: [wallet-signature, http-bearer]
+  api_key_in: []
+  oauth2_flows: []
+  token_format: JWT
+  token_ttl_seconds: 3600
+schemes:
+  - name: eip712WalletLogin
+    type: wallet-signature
+    standard: EIP-712
+    description: >-
+      Login is a three-step wallet-signature flow. POST /api/v1/user/login with
+      the wallet address returns an EIP-712 typed message; the client signs it
+      with the wallet key; POST /api/v1/user/login/verify with the signature
+      returns a JWT access token (valid 1 hour).
+    login_operations:
+      - POST /api/v1/user/login
+      - POST /api/v1/user/login/verify
+      - POST /api/v1/user/login/refresh
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    description: >-
+      Private endpoints require Authorization: 'Bearer <accessToken>'. The token
+      is the JWT issued by the login/verify flow and expires after 1 hour; renew
+      via POST /api/v1/user/login/refresh before expiry.
+    applies_to: All private REST endpoints (/api/v1/*) and the WebSocket `login` command
+public_access: >-
+  Public market-data endpoints under /api/v1/p/* and public WebSocket channels
+  require no authentication.
