@@ -1,0 +1,71 @@
+# ETHGas
+
+## Docs
+
+- [Our Vision: Realtime Ethereum](https://docs.ethgas.com/overview/our-vision-realtime-ethereum.md): Start Here: The Future is Instant
+- [What is ETHGas?](https://docs.ethgas.com/overview/our-vision-realtime-ethereum/what-is-ethgas.md): From Digital Chaos to Realtime Ethereum.
+- [Our Four Pillars](https://docs.ethgas.com/overview/our-vision-realtime-ethereum/our-four-pillars.md): Our Four Pillars: The ETHGas Flywheel
+- [Realtime Ethereum](https://docs.ethgas.com/overview/realtime.md)
+- [Supported Realtime RPC Methods](https://docs.ethgas.com/overview/realtime/supported-realtime-rpc-methods.md)
+- [Builder RPC (Private orderflow)](https://docs.ethgas.com/overview/realtime/builder-rpc-private-orderflow.md)
+- [Block Building Algorithm and Flow](https://docs.ethgas.com/overview/realtime/block-building-algorithm-and-flow.md)
+- [Libraries](https://docs.ethgas.com/overview/realtime/libraries.md)
+- [Real Time Builder Public Keys](https://docs.ethgas.com/overview/realtime/real-time-builder-public-keys.md)
+- [Realtime FAQs](https://docs.ethgas.com/overview/realtime/realtime-faqs.md)
+- [Solutions For You](https://docs.ethgas.com/overview/solutions-for-you.md)
+- [For Protocols & dApps](https://docs.ethgas.com/overview/solutions-for-you/for-protocols-and-dapps.md): Build Stickier Products. Let Your Users Forget About Gas.
+- [For Traders & Market Makers](https://docs.ethgas.com/overview/solutions-for-you/for-traders-and-market-makers.md): A New Liquid Asset Class. Trade the Fabric of Ethereum.
+- [For Validators & Staking Operators](https://docs.ethgas.com/overview/solutions-for-you/for-validators-and-staking-operators.md): Earn More While Powering a Realtime Ethereum
+- [For Retail Users](https://docs.ethgas.com/overview/solutions-for-you/for-retail-users.md): Turn Your Gas Fees into Rewards.
+- [Our Technology](https://docs.ethgas.com/overview/our-technology.md): The Engine of a Realtime Ethereum
+- [Overview](https://docs.ethgas.com/overview/our-technology/overview.md)
+- [What are Gas Markets?](https://docs.ethgas.com/overview/our-technology/what-are-gas-markets.md)
+- [The ETHGas Architecture](https://docs.ethgas.com/overview/our-technology/the-ethgas-architecture.md)
+- [The Design Process](https://docs.ethgas.com/overview/our-technology/the-design-process.md)
+- [Products Deepdive](https://docs.ethgas.com/overview/products-deepdive.md)
+- [Inclusion Preconfirmations](https://docs.ethgas.com/overview/products-deepdive/inclusion-preconfirmations.md)
+- [Execution Preconfirmations](https://docs.ethgas.com/overview/products-deepdive/execution-preconfirmations.md): Coming est. 2nd half of 2025
+- [Whole Block Commitments](https://docs.ethgas.com/overview/products-deepdive/whole-block-commitments.md)
+- [Base Fee Futures](https://docs.ethgas.com/overview/products-deepdive/base-fee-futures.md): Est. Q1 2026
+- [Open Gas](https://docs.ethgas.com/overview/open-gas.md): Eliminate Gas Fees. Drive Onchain Adoption.
+- [EigenCloud](https://docs.ethgas.com/overview/open-gas/eigencloud.md): Open Gas Rebate Details for EigenCloud
+- [Ether.fi](https://docs.ethgas.com/overview/open-gas/ether.fi.md): Open Gas Rebate Details for ether.fi
+- [ETHGas Foundation](https://docs.ethgas.com/overview/open-gas/ethgas-foundation.md): Open Gas Rebate Details for ETHGas Foundation
+- [Pendle](https://docs.ethgas.com/overview/open-gas/pendle.md): Open Gas Rebate Details for Pendle
+- [f(x) Protocol](https://docs.ethgas.com/overview/open-gas/f-x-protocol.md): Open Gas Rebate Details for f(x) Protocol
+- [Node Operators](https://docs.ethgas.com/get-started/node-operators.md)
+- [Quick Start Guide](https://docs.ethgas.com/get-started/node-operators/quick-start-guide.md)
+- [Multi-Relay Support](https://docs.ethgas.com/get-started/node-operators/multi-relay-support.md)
+- [Collateral AVS](https://docs.ethgas.com/get-started/node-operators/collateral-avs.md)
+- [Commitment Buyers](https://docs.ethgas.com/get-started/commitment-buyers.md)
+- [Traders](https://docs.ethgas.com/get-started/traders.md)
+- [Builders & Sequencers](https://docs.ethgas.com/get-started/builders-and-sequencers.md)
+- [Relays](https://docs.ethgas.com/get-started/relays.md)
+- [Community (Beans & Quests)](https://docs.ethgas.com/community/community-beans-and-quests.md): Welcome to the Gasless Future!
+- [Season 1 Archive](https://docs.ethgas.com/community/community-beans-and-quests/season-1-archive.md): Welcome to the Gasless Future!
+- [Audit Reports](https://docs.ethgas.com/security/audit-reports.md)
+- [Technical Integration](https://docs.ethgas.com/developer-resources/technical-integration.md): We are already live on Mainnet and users can also test on Hoodi environment.
+
+## Foundation & Governance
+
+- [ETHGas Foundation](https://docs.ethgas.com/foundation/ethgas-foundation.md): Governing Realtime Ethereum
+- [$GWEI Tokenomics](https://docs.ethgas.com/foundation/tokenomics.md): The Fuel for Realtime Ethereum
+- [Staking & veGWEI](https://docs.ethgas.com/foundation/staking-and-vegwei.md): Long-Term Alignment via Vote Escrow
+- [Foundation FAQ](https://docs.ethgas.com/foundation/foundation-faq.md): Got questions? We've got answers.
+- [$GWEI Bridge Instructions](https://docs.ethgas.com/foundation/gwei-bridge-instructions.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.ethgas.com/overview/our-vision-realtime-ethereum.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

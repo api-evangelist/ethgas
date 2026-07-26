@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.ethgas.com/ (Error Codes / lookup tables)
+format: custom-envelope
+envelope:
+  shape: '{ "success": false, "data": { "errorCode": <int>, "errorMsg": <string> } }'
+  code_field: errorCode
+  message_field: errorMsg
+classes:
+  - range: 0-5
+    name: Common errors
+    description: Common request/validation errors shared across endpoints.
+  - range: 20-26
+    name: System errors
+    description: System-level errors (documented in the API reference lookup tables).
+  - range: trade-engine
+    name: Trade engine errors
+    description: Operation-specific errors raised by the matching / trade engine.
+  - range: '>=100000'
+    name: API-level errors
+    description: Operation-specific application errors, one class per endpoint family.
+examples:
+  - code_name: COLLATERAL_PER_SLOT_NEGATIVE
+    area: collateral
+    meaning: Requested collateral-per-slot value is negative.
+  - code_name: COLLATERAL_PER_SLOT_TOO_LARGE
+    area: collateral
+    meaning: Requested collateral-per-slot value exceeds the allowed maximum.
+notes: >-
+  ETHGas returns errors inside its {success,data} envelope rather than as
+  RFC 9457 problem+json. The full numeric lookup tables live in the API
+  reference; ranges and representative codes captured here. Not fabricated -
+  only classes/examples explicitly published in the docs are recorded.

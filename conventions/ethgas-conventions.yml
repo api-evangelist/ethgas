@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.ethgas.com/
+authentication:
+  style: EIP-712 wallet-signature login -> JWT Bearer token
+  detail: authentication/ethgas-authentication.yml
+  public_prefix: /api/v1/p/
+  private_prefix: /api/v1/
+response_envelope:
+  shape: '{ "success": boolean, "data": object }'
+  error_fields: [errorCode, errorMsg]
+  detail: errors/ethgas-error-codes.yml
+pagination:
+  style: cursor
+  params:
+    - name: startId
+      role: cursor (id to page from)
+    - name: limit
+      role: page size
+    - name: asc
+      role: sort direction (boolean), where supported
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header or parameter is documented. Order placement is not
+    idempotent; trading clients must track client order state directly.
+request_tracing:
+  request_id_header: none documented
+versioning:
+  scheme: uri-path
+  current: v1
+  detail: lifecycle/ethgas-lifecycle.yml
+rate_limiting:
+  documented: false
+  note: No published rate-limit values or rate-limit response headers found in the docs.
+realtime:
+  websocket: wss://mainnet.app.ethgas.com/ws (mainnet), wss://hoodi.app.ethgas.com/ws (testnet)
+  commands: [subscribe, unsubscribe, query, login]
+  detail: asyncapi/ethgas-websocket-webhooks.yml

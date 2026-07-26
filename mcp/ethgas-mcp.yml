@@ -1,0 +1,62 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: https://developers.ethgas.com/ (REST API operations)
+note: >-
+  ETHGas publishes no official hosted/remote MCP server. This is a candidate
+  tool list derived from documented REST operations to seed an MCP server;
+  operations are grounded in the public API reference, not fabricated. Public
+  market-data tools need no auth; account/trading/funding/validator tools
+  require the EIP-712 -> JWT Bearer login (see authentication/).
+server:
+  name: ethgas
+  transport: http
+tools:
+  - name: get_wholeblock_markets
+    description: List whole-block commitment markets.
+    source_operation: GET /api/v1/p/wholeblock/markets
+    auth: none
+  - name: get_inclusion_preconf_markets
+    description: List inclusion-preconfirmation markets.
+    source_operation: GET /api/v1/p/inclusion-preconf/markets
+    auth: none
+  - name: get_orderbook
+    description: Get an order-book snapshot for a market.
+    source_operation: GET /api/v1/p/{market}/orderbook
+    auth: none
+  - name: login_get_message
+    description: Begin login; return the EIP-712 message to sign for a wallet address.
+    source_operation: POST /api/v1/user/login
+    auth: none
+  - name: login_verify
+    description: Verify the signed EIP-712 message and receive a JWT access token.
+    source_operation: POST /api/v1/user/login/verify
+    auth: none
+  - name: get_user_info
+    description: Get the authenticated user's profile and settings.
+    source_operation: GET /api/v1/user/info
+    auth: bearer
+  - name: list_accounts
+    description: List the user's trading accounts.
+    source_operation: GET /api/v1/user/accounts
+    auth: bearer
+  - name: place_wholeblock_order
+    description: Place a whole-block commitment order.
+    source_operation: POST /api/v1/wholeblock/order
+    auth: bearer
+  - name: place_inclusion_preconf_order
+    description: Place an inclusion-preconfirmation order.
+    source_operation: POST /api/v1/inclusion-preconf/order
+    auth: bearer
+  - name: list_deposits
+    description: List collateral deposits.
+    source_operation: GET /api/v1/funding/deposits
+    auth: bearer
+  - name: request_withdraw
+    description: Request a collateral withdrawal.
+    source_operation: POST /api/v1/funding/withdraw
+    auth: bearer
+  - name: register_validator
+    description: Register a validator with the ETHGas Exchange.
+    source_operation: POST /api/v1/validator/register
+    auth: bearer

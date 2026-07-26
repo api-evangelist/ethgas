@@ -1,8 +1,17 @@
 aid: ethgas
 name: ETHGas
-description: 'ETHGas is a company surfaced as a portfolio company of polychain and added to the API Evangelist
-  network as a stub for enrichment. Sector: infrastructure. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  ETHGas is an Ethereum blockspace exchange that turns Ethereum blockspace into a
+  tradable commodity, enabling instant transactions through preconfirmations
+  (execution and inclusion preconfs), whole-block commitments, and base-fee
+  futures. Its public developer platform exposes a v1 REST API and a WebSocket
+  streaming API for market data, order placement and management, funding
+  (collateral deposits and withdrawals), and validator/builder registration.
+  Authentication uses an EIP-712 wallet-signature login that issues a short-lived
+  JWT bearer token; public market-data endpoints under /api/v1/p require none.
+  ETHGas runs on Ethereum mainnet with a Hoodi testnet environment, and backs the
+  exchange with a Commit-Boost validator module and a modified rbuilder block
+  builder. ETHGas is backed by Polychain.
 url: https://raw.githubusercontent.com/api-evangelist/ethgas/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +19,65 @@ x-backed-by:
 - polychain
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://ethgas.com/favicon.ico
 tags:
 - Company
 - Infrastructure
-apis: []
+- Blockchain
+- Ethereum
+- Trading
+- Preconfirmations
+- Blockspace
+- MEV
+- DeFi
+- Web3
+apis:
+- name: ETHGas API
+  description: >-
+    ETHGas v1 REST + WebSocket API for market data, order placement/management,
+    funding (collateral deposits/withdrawals), and validator/builder operations
+    across whole-block commitments and inclusion preconfirmations.
+  humanURL: https://developers.ethgas.com
+  baseURL: https://mainnet.app.ethgas.com
+  tags:
+  - Trading
+  - Ethereum
+  - Preconfirmations
+  - Blockspace
+  properties:
+  - type: Authentication
+    url: authentication/ethgas-authentication.yml
+  - type: Conventions
+    url: conventions/ethgas-conventions.yml
+  - type: ErrorCatalog
+    url: errors/ethgas-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/ethgas-lifecycle.yml
+  - type: ChangeLog
+    url: changelog/ethgas-changelog.yml
+  - type: Sandbox
+    url: sandbox/ethgas-sandbox.yml
+  - type: Webhooks
+    url: asyncapi/ethgas-websocket-webhooks.yml
+  - type: MCPServer
+    url: mcp/ethgas-mcp.yml
+  - type: Conformance
+    url: conformance/ethgas-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +86,54 @@ maintainers:
 common:
 - type: Website
   url: https://ethgas.com
+- type: DeveloperPortal
+  url: https://developers.ethgas.com
+- type: Documentation
+  url: https://docs.ethgas.com
+- type: APIReference
+  url: https://developers.ethgas.com
+- type: GettingStarted
+  url: https://docs.ethgas.com/developer-resources/technical-integration
+- type: Blog
+  url: https://ethgas.com/blog
+- type: GitHubOrganization
+  url: https://github.com/ethgas-developer
+- type: Support
+  url: https://discord.gg/ethgas
+- type: SignUp
+  url: https://app.ethgas.com
+- type: TermsOfService
+  url: https://ethgas.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://ethgas.com/privacy-policy
+- type: Authentication
+  url: authentication/ethgas-authentication.yml
+- type: Conventions
+  url: conventions/ethgas-conventions.yml
+- type: ErrorCatalog
+  url: errors/ethgas-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/ethgas-lifecycle.yml
+- type: ChangeLog
+  url: changelog/ethgas-changelog.yml
+- type: Sandbox
+  url: sandbox/ethgas-sandbox.yml
+- type: Webhooks
+  url: asyncapi/ethgas-websocket-webhooks.yml
+- type: MCPServer
+  url: mcp/ethgas-mcp.yml
+- type: Conformance
+  url: conformance/ethgas-conformance.yml
+- type: Packages
+  url: packages/ethgas-packages.yml
+- type: WellKnown
+  url: well-known/ethgas-well-known.yml
+- type: LLMsTxt
+  url: llms/ethgas-llms.txt
+- type: DomainSecurity
+  url: security/ethgas-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

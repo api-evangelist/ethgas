@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/ on ethgas.com + mainnet.app.ethgas.com
+hosts:
+  - host: https://ethgas.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+  - host: https://mainnet.app.ethgas.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+notes: >-
+  No /.well-known discovery documents are published on either the marketing host
+  or the API host. Absence recorded as expected data. (ETHGas auth is EIP-712
+  wallet-signature login issuing JWTs, not OAuth/OIDC, so OAuth/OIDC discovery
+  documents are not expected.)

@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.ethgas.com/ (WebSocket API)
+spec_type: Webhooks
+surface: websocket
+description: >-
+  ETHGas exposes a realtime push surface over WebSocket rather than HTTP
+  webhooks. Clients connect, then use the subscribe/unsubscribe/query/login
+  commands to stream public market data and (after login) private account
+  events. Captured as a channel catalog; ETHGas publishes no AsyncAPI document.
+endpoints:
+  mainnet: wss://mainnet.app.ethgas.com/ws
+  testnet: wss://hoodi.app.ethgas.com/ws
+commands: [subscribe, unsubscribe, query, login]
+channels:
+  public:
+    - name: Preconf Market Update
+    - name: Candlestick Update
+    - name: Recent Trades Update
+    - name: Order Book Update
+    - name: Ticker Update
+    - name: Inclusion Preconf Top Sales
+    - name: Block Builder Update
+  private:
+    - name: Account Order Update
+      auth: requires login
+    - name: Account Transaction Update
+      auth: requires login
+    - name: Account Position Update
+      auth: requires login
+    - name: Preconf Bundle Update
+      auth: requires login
+notes: Channel names captured verbatim from the docs; message payload schemas are not published as a spec.

@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://pypi.org/project/python-ethgas/ + https://github.com/ethgas-developer
+notes: >-
+  ETHGas publishes no first-party REST/WebSocket client SDK. The only client
+  library on a public package registry (python-ethgas on PyPI) is explicitly
+  community/unofficial. First-party published artifacts are Rust node-operator /
+  builder tooling in the ethgas-developer GitHub org (not API client SDKs).
+packages:
+  - language: python
+    registry: pypi
+    name: python-ethgas
+    url: https://pypi.org/project/python-ethgas/
+    install: pip install python-ethgas
+    official: false
+    summary: Unofficial EthGas REST + WebSocket client (community supported)
+  - language: rust
+    registry: github
+    name: ethgas-preconf-commit-boost-module
+    url: https://github.com/ethgas-developer/ethgas-preconf-commit-boost-module
+    install: git clone https://github.com/ethgas-developer/ethgas-preconf-commit-boost-module
+    official: true
+    summary: Commit-Boost module generating BLS signatures to register validators in the ETHGas Exchange
+  - language: rust
+    registry: github
+    name: preconf-builder
+    url: https://github.com/ethgas-developer/preconf-builder
+    install: git clone https://github.com/ethgas-developer/preconf-builder
+    official: true
+    summary: Modified Flashbots rbuilder MEV-Boost block builder for ETHGas preconfirmations
+  - language: rust
+    registry: github
+    name: ethgas-builder-scripts
+    url: https://github.com/ethgas-developer/ethgas-builder-scripts
+    install: git clone https://github.com/ethgas-developer/ethgas-builder-scripts
+    official: true
+    summary: Builder registration scripts for ETHGas

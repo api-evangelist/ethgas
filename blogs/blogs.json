@@ -1,0 +1,14 @@
+{
+  "repo": "ethgas",
+  "feeds": [
+    {
+      "source": "https://docs.ethgas.com/developer-resources/technical-integration",
+      "feed_url": "https://docs.ethgas.com/developer-resources/technical-integration",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.ethgas.com/developer-resources/technical-integration + https://developers.ethgas.com/
+model: separate-testnet-environment
+description: >-
+  ETHGas provides a public testnet environment on the Ethereum Hoodi testnet
+  alongside mainnet. There is no test-key prefix scheme; test vs live is
+  selected by base URL / network. No fabricated test values below - only the
+  published testnet endpoints and contract addresses are recorded.
+environments:
+  - name: testnet
+    network: Hoodi
+    rest: https://hoodi.app.ethgas.com
+    websocket: wss://hoodi.app.ethgas.com/ws
+    relay: https://0xb20c3fe59db9c3655088839ef3d972878d182eb745afd8abb1dd2abf6c14f93cd5934ed4446a5fe1ba039e2bc0cf1011@hoodi-relay.ethgas.com
+    collateral_contract: '0x104Ef4192a97E0A93aBe8893c8A2d2484DFCBAF1'
+    collateral_contract_explorer: https://hoodi.etherscan.io/address/0x104Ef4192a97E0A93aBe8893c8A2d2484DFCBAF1
+  - name: mainnet
+    network: Ethereum
+    rest: https://mainnet.app.ethgas.com
+    websocket: wss://mainnet.app.ethgas.com/ws
+    collateral_contract: '0x3314Fb492a5d205A601f2A0521fAFbD039502Fc3'
+    collateral_contract_explorer: https://etherscan.io/address/0x3314fb492a5d205a601f2a0521fafbd039502fc3
+notes: >-
+  Testing requires a funded Hoodi wallet to sign the EIP-712 login and deposit
+  testnet collateral; ETHGas publishes no hosted test credentials or faucet
+  tokens of its own.

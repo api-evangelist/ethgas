@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.ethgas.com/ (CHANGE LOG) + https://docs.ethgas.com/developer-resources/technical-integration
+status: beta
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://developers.ethgas.com/
+environments:
+  - name: mainnet
+    rest: https://mainnet.app.ethgas.com
+    websocket: wss://mainnet.app.ethgas.com/ws
+    launched: '2025-04-02'
+  - name: testnet
+    network: Hoodi
+    rest: https://hoodi.app.ethgas.com
+    websocket: wss://hoodi.app.ethgas.com/ws
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No published deprecation/sunset policy found.
+sla:
+  url: null
+  note: No published SLA/uptime target found.
+status_page: null
+status_page_note: No dedicated status page found on ethgas.com / app.ethgas.com.
+changelog: changelog/ethgas-changelog.yml

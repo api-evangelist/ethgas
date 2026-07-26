@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.ethgas.com/ + https://docs.ethgas.com/security/audit-reports
+standards:
+  - id: eip712-typed-data
+    conforms: true
+    evidence: Login signs an EIP-712 typed message (developers.ethgas.com Authentication).
+  - id: jwt-bearer
+    conforms: true
+    evidence: Private endpoints use Authorization Bearer JWT (RFC 6750-style).
+  - id: oauth2
+    conforms: false
+    evidence: Auth is wallet-signature login, not OAuth2.
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {success,data:{errorCode,errorMsg}} envelope, not application/problem+json.
+  - id: cursor-pagination
+    conforms: true
+    evidence: List endpoints paginate with startId/limit/asc.
+security_audits:
+  audit_repo: https://github.com/ethgas-developer/ethgas-audit
+  audits:
+    - firm: Sigma Prime
+      scope: EthgasPool collateral contract + Commit-Boost module
+    - firm: Node Security
+      scope: EthgasPool collateral contract
+notes: >-
+  Smart-contract security audits are published, but ETHGas publishes no
+  enterprise compliance certifications (SOC 2 / ISO 27001 / PCI / HIPAA), so no
+  Compliance pointer is emitted.

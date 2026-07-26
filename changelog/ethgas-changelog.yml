@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.ethgas.com/ (CHANGE LOG)
+scheme: dated
+current_version: v1
+entries:
+  - date: '2026-07-17'
+    highlights:
+      - Payment history now includes the validator payout address.
+    breaking: false
+  - date: '2026-07-15'
+    highlights:
+      - Added Dashboard operator payment-history API.
+    breaking: false
+  - date: '2025-10-31'
+    highlights:
+      - Ethereum Fusaka upgrade support.
+    breaking: false
+  - date: '2025-07-08'
+    highlights:
+      - Added collateral-per-slot feature.
+      - Renamed the validator payout-address field.
+    breaking: true
+  - date: '2025-04-02'
+    highlights:
+      - Mainnet v1 launched.
+    breaking: false
+notes: Recent window only; the live CHANGE LOG at developers.ethgas.com is the source of truth.
