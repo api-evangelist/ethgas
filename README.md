@@ -64,6 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ETHGas is a company surfaced as a portfolio company of polychain and added to the API Evangelist network as a stub for enrichment. Sector: infrastructure. This profile is a lead awaiting the enrichment pipeline.
+ETHGas is an Ethereum blockspace exchange that turns Ethereum blockspace into a tradable commodity, enabling instant transactions through preconfirmations (execution and inclusion preconfs), whole-block commitments, and base-fee futures. Its public developer platform exposes a v1 REST API and a WebSocket streaming API for market data, order placement and management, funding (collateral deposits and withdrawals), and validator/builder registration. Authentication uses an EIP-712 wallet-signature login that issues a short-lived JWT bearer token; public market-data endpoints under /api/v1/p require none. ETHGas runs on Ethereum mainnet with a Hoodi testnet environment, and backs the exchange with a Commit-Boost validator module and a modified rbuilder block builder. ETHGas is backed by Polychain.
 
-Backed by: polychain — https://ethgas.com
+**Areas:** Company · Infrastructure · Blockchain · Ethereum · Trading · Preconfirmations · Blockspace · MEV · DeFi · Web3
+
+## ETHGas on APIs.io
+
+Everything profiled for ETHGas is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ethgas/](https://apis.io/providers/ethgas/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [ETHGas API](https://apis.io/apis/ethgas/ethgas-api/) — ETHGas v1 REST + WebSocket API for market data, order placement/management, funding (collateral deposits/withdrawals), and validator/builder operations…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Ethgas Websocket Webhooks](https://apis.io/asyncapis/ethgas/ethgas-websocket-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [ethgas](https://apis.io/servers/ethgas/ethgas/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Ethgas Authentication](https://apis.io/security/ethgas/ethgas-authentication/)
+- [Ethgas Domain Security](https://apis.io/security/ethgas/ethgas-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://ethgas.com)
+- [Documentation](https://docs.ethgas.com)
+- [Getting started](https://docs.ethgas.com/developer-resources/technical-integration)
+- [API reference](https://developers.ethgas.com)
+- [Sign up](https://app.ethgas.com)
+- [Support](https://discord.gg/ethgas)
+- [Blog](https://ethgas.com/blog)
+- [Terms of service](https://ethgas.com/terms-of-service)
+- [Privacy policy](https://ethgas.com/privacy-policy)
+- [GitHub](https://github.com/ethgas-developer)
+
+## API Evangelist rating
+
+**Kin Score 40.1** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 21.1 |
+
+**Agent readiness 22.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 23.1** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ethgas/](https://apis.io/providers/ethgas/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ETHGas: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ethgas/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
